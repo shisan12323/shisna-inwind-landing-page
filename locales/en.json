@@ -33,4 +33,8 @@
 		"h2": "Build Your Landing Page Now",
 		"h3": "Build your landing page, show your product, and start earning!"
 	},
+	"CTAButton": {
+		"btn1": "Get Source Code",
+		"btn2": "View Docs"
+	}
 }
