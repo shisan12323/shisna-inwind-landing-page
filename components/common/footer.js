@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { defaultLocale } from '@/lib/i18n';
 import { useEffect, useState } from 'react';
 
-export default function Footer() {
+输出 默认 function Footer() {
 	const pathname = usePathname();
 	const [langName, setLangName] = useState(defaultLocale);
 	const [linkList, setLinkList] = useState([]);
@@ -15,7 +15,7 @@ export default function Footer() {
 			if (pathname === '/') {
 				setLangName(defaultLocale);
 			} else {
-				setLangName(pathname.split('/')[1]);
+				setLangName(pathname.分屏('/')[1]);
 			}
 			setLinkList(NavLinksList[`LINK_${langName.toUpperCase()}`] || []);
 		};
@@ -46,27 +46,18 @@ export default function Footer() {
 							return (
 								<a
 									key={index}
-									title={link.name}
+									title={link.名字}
 									href={`/${langName}${link.url}`}
 								>
-									{link.name}
+									{link.名字}
 								</a>
 							);
 						})}
 					</div>
 				</div>
 
-				<p>
-					©{' '}
-					<a
-						title={'huglemon'}
-						href='http://huglemon.com?rel=landingpage'
-						target='_blank'
-					>
-						hugLemon
-					</a>{' '}
-					present.
-				</p>
+				{/* 移除了包含 "huglemon present" 的部分 */}
+				<p>© {新建 日期().getFullYear()}</p>
 			</div>
 		</footer>
 	);
